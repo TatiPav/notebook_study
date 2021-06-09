@@ -1,0 +1,29 @@
+git clone
+python -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip
+pip install django
+requirements.txt
+django-admin startproject notebook .
+ls
+ls notebook
+python manage.py migrate
+ls
+{
+settings.py
+LANGUAGE_CODE = 'ru-ru'
+TIME_ZONE = 'Europe/Moscow'
+}
+python manage.py runserver 8050
+[Ctr+C]
+python manage.py startapp notebooks
+ls
+ls notebooks/
+
+INSTALLED_APPS = [
+    'notebooks',
+python manage.py makemigrations notebooks
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py shell
+python manage.py shell
